@@ -1,2 +1,2 @@
 # ordermanagement
-Using AWS services for Order Managament 
+The objective of this project is to create a order management service using AWS 

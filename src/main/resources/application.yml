@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ordermanagement
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSOWRD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+ServicePointManager:
+  DefaultConnectionLimit: 25
+
+cloud:
+  aws:
+    region: ${AWS_REGION}
+    s3:
+      bucket: ${S3_BUCKET_NAME}
+    sqs:
+      queueUrl: ${QUEUE_URL}
+    ses:
+      senderEmail: ${SES_SENDER_EMAIL}
+
+server:
+  servlet:
+    context-path: /ws-ordermanagement
+    port: 8080
+logging:
+  level:
+    root: INFO
+    com:
+      aws:
+        ordermanagement: DEBUG
